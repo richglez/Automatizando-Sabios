@@ -1,0 +1,58 @@
+*{
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+}
+
+
+
+
+.titulo{
+    text-align: center;
+    margin-top: 300px; /* Agrega margen superior para separar del encabezado */
+}
+
+
+.titulo h1 {
+    font-size: 60px; /* Puedes ajustar el tamaño de la fuente según tus preferencias */
+  }
+
+
+
+.titulo p {
+    font-size: 20px; /* Puedes ajustar el tamaño de la fuente según tus preferencias */
+    justify-content: center;
+    text-align: center;
+}
+
+
+.inicio-sesion a{
+    text-align: right; /* Esto alinea el enlace a la derecha */
+    margin-top: 10px;
+}
+
+
+
+
+
+/* _______________________MENU_______________________ */
+.menu-icon{
+    height: 130px;
+}
+
+
+/* Estilo por defecto del menú, oculto */
+.menu-navegacion {
+    display: none;
+  }
+  
+
+.menu-icon:hover {
+    display: block;
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+    border: 7px solid #000; /* Cambia el color y grosor del marco según tus preferencias */
+    border-radius: 5px; /* Agrega esquinas redondeadas al marco si deseas */
+  }
