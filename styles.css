@@ -157,13 +157,16 @@ header {
     border-radius: 0 16px 16px 0;
     background: #fff;
     
+    
 }
 
 .list_item{
     font-size: 20px;
     list-style: none;
     width: 100%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align:left; /* Alinea el texto a la izquierda */
     
 }
 
