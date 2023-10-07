@@ -3,7 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    
 }
+
+
+html {
+    scroll-behavior: smooth; /* Agregar scroll-behavior para el desplazamiento suave */
+}
+
+
 
 body {
     background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
@@ -28,21 +36,31 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+/* _______________________AUTOMATIZANDO A SABIOS - TITULO_______________________ */
 .titulo h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 400px;
-    font-size: 60px;
+    margin-left: 100px;
+    font-size: 80px;
 }
 
 .titulo p{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 400px;
-    text-align: justify;
+    margin-left: 100px;
+    text-align: center;
     font-weight: 20px;
+    margin-right: 70px;
 }
 
 
@@ -103,6 +121,7 @@ header {
     flex-direction: column;
     border-radius: 0 16px 16px 0;
     background: #fff;
+    
 }
 
 .list_item{
@@ -110,6 +129,7 @@ header {
     list-style: none;
     width: 100%;
     text-align: center;
+    
 }
 
 
@@ -119,6 +139,7 @@ header {
     gap: 1em;
     width: 70%;
     margin: 0 auto;
+    
 }
 
 
@@ -127,11 +148,53 @@ header {
     display: block;
     padding: 15px 0;
     text-decoration: none;
+    
 }
 
 
 .list_item:hover{
     background: #dbe8ec;
+}
+
+
+
+
+
+
+
+
+
+/* _______________________ABOUT US_______________________ */
+.acerca {
+    width: 100%;
+    height: auto; /* Cambiado a auto para que la altura se ajuste al contenido */
+    background: #fff;
+    overflow: hidden; /* Evitar que el contenido flote fuera del contenedor */
+    padding: 20px; /* Añadir espacio alrededor del contenido */
+}
+
+.acerca h1 {
+    font-size: 36px; /* Reducir el tamaño del título para que sea más legible */
+    text-align: center;
+    margin: 20px 0; /* margen entre el parrafo con el titulo superior */
+    margin-left: 800px;
+}
+
+.acerca p {
+    text-align: justify; /* Justifica el texto para que se ajuste al ancho */
+    margin: 0; /* Eliminar el margen predeterminado */
+}
+
+.acerca #img-About-Us {
+    max-width: 700px; /* Hacer que la imagen sea responsiva */
+    height: auto; /* Permitir que la altura se ajuste proporcionalmente */
+    float: left; /* Flotar la imagen a la izquierda */
+    margin: 0 20px 20px 0; /* Espaciado alrededor de la imagen */
+    margin-left: 40px;
+}
+
+.acerca #infoQuienesSomos {
+    text-align: justify; /* Justificar el texto para que se ajuste al ancho */
 }
 
 
