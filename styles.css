@@ -7,7 +7,7 @@
 }
 
 
-html {
+:root{
     scroll-behavior: smooth; /* Agregar scroll-behavior para el desplazamiento suave */
 }
 
@@ -33,6 +33,12 @@ header {
     left: 60px;
     height:160px;;
 }
+
+
+
+
+
+
 
 
 
@@ -72,7 +78,9 @@ header {
 
 
 
-/* _______________________LOGIN BOTON_______________________ */
+/* _______________________LOGIN y REGISTER BOTON_______________________ */
+
+
 .login {
     position: fixed;
     top: 20px; /* Ajusta la distancia desde la parte superior */
@@ -94,6 +102,33 @@ header {
 }
 
 .login a{
+    text-decoration: none;
+    color:#fff
+}
+
+
+
+.register {
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 170px; /* Ajusta la distancia desde la derecha */
+    display: inline-block;
+    background-color: #59ace4; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Relleno interno del botón */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    font-size: 16px; /* Tamaño de letra */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+}
+
+
+.register:hover {
+    background-color: #519bd8; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.register a{
     text-decoration: none;
     color:#fff
 }
@@ -174,7 +209,7 @@ header {
 }
 
 .acerca h1 {
-    font-size: 36px; /* Reducir el tamaño del título para que sea más legible */
+    font-size: 70px; /* Reducir el tamaño del título para que sea más legible */
     text-align: center;
     margin: 20px 0; /* margen entre el parrafo con el titulo superior */
     margin-left: 800px;
@@ -196,6 +231,86 @@ header {
 .acerca #infoQuienesSomos {
     text-align: justify; /* Justificar el texto para que se ajuste al ancho */
 }
+
+#Back-Home i{
+    font-size: 70px;
+    font-style: none;
+    outline: none; /* Quita el resaltado al hacer clic */
+    color: #303440;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* _______________________SERVICIOS_______________________ */
+/* Estilos para la caja de color */
+.box-services {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 1200px;
+    
+}
+
+
+
+
+.services h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de flexbox a columna */
+    align-items: center; /* Centra los elementos verticalmente */
+    
+    
+}
+
+/* Estilos para la lista de servicios */
+.service-container {
+    display: flex;
+    flex-direction: column; /* Organiza los servicios en una columna */
+    align-items: flex-start; /* Alínea los servicios al comienzo de la columna */
+    margin-top: 20px; /* Espaciado superior entre servicios */
+    
+    
+}
+
+/* Estilos para cada servicio */
+.service {
+    background-color: #fff; /* Color de fondo para cada servicio */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Espaciado inferior entre servicios */
+    width: 100%; /* Ancho completo dentro de la columna */
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de flexbox a columna */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-bottom: 30px; /* Agregar margen inferior de 20px */
+    
+}
+
+
+.service:hover {
+    background-color: #d0faff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Aplica una escala del 105% al hacer hover */
+    cursor: pointer;
+}
+
 
 
 
