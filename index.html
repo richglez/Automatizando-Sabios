@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="app.js">
+    <script src="app.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
     <box-icon name='menu' ></box-icon>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Automatizando a Sabios</title>
+    <link rel="icon" href="images/logo-automatizandoASabui-removebg-preview.ico">
 </head>
 
 
@@ -26,41 +27,114 @@
 <body>
 
 
-    <!-- Este es el contenedor del menú -->
-    <div class="menu-container">
-        <!-- Elemento que activa el menú al pasar el mouse sobre él -->
-        <img src="images/bx-menu.svg" alt="" class="menu-icon">
-        <!-- Menú oculto por defecto -->
-        <nav class="menu-navegacion">
-            <a href="#">Inicio</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Asistente Virtual</a>
+    <!-- HOME pagina principal-->
+    <header id="home">
+
+
+        
+
+        <!-- Este es el contenedor del menú -->
+        <nav class="nav">
+            <ul class="list">
+
+
+                <!-- LOGO -->
+                <img src="images/logo-automatizando.png" alt="" srcset="" class="logo">
+
+                <!-- opcion 1 Inicio-->
+                <li class="list_item">
+                    <div class="list_button">
+                        <i class='bx bxs-home-alt-2' ></i>
+                        <a href="#home" class="nav_link nav_link--inside">Inicio</a>  
+                    </div>
+                    
+                </li>
+
+                
+                <!-- opcion 2 Acerca de nosotros-->
+                <li class="list_item">
+                    <div class="list_button list_button--click">
+                        <i class='bx bxs-business'></i>
+                        <a href="#" class="nav_link nav_link--inside">Acerca de nosotros</a>
+                    </div>
+                </li>
+
+
+                <!-- opcion 3 Servicios-->
+                <li class="list_item">
+                    <div class="list_button">
+                        <i class='bx bxs-book-content'></i>
+                        <a href="#" class="nav_link nav_link--inside">Servicios</a> 
+                    </div>
+                </li>
+
+
+                <!-- opcion 4 Asistente Virtual(Chatbot)-->
+                <li class="list_item">
+                    <div class="list_button">
+                        <i class='bx bxs-message-alt-dots' ></i>
+                        <a href="chatbox.html" class="nav_link nav_link--inside">Asistente Virtual</a> 
+                    </div>
+                </li>
+
+
+
+                <!-- opcion 5 Ayuda y Soporte-->
+                <li class="list_item">
+                    <div class="list_button">
+                        <i class='bx bxs-help-circle' ></i>
+                        <a href="#" class="nav_link nav_link--inside">Ayuda y Soporte</a> 
+                    </div>
+                </li>
+
+
+                <li class="list_item">
+                    <div class="list_button">
+                        <i class='bx bx-mail-send' ></i>
+                        <a href="#footer" class="nav_link nav_link--inside">Contactanos</a> 
+                    </div>
+                </li>
+
+
+            </ul>
         </nav>
-    </div>
 
 
+
+        <div class="titulo">
+            <h1>Automatizando a Sabios</h1>
+                <br>
+            <p>
+                Automatizando Sabios, está desarrollando una plataforma 
+                y aplicación digital para ayudar a adultos mayores de edad
+                <br>
+                en la Ciudad de México. Disminuyendo la brecha digital 
+                por medio de cursos
+                y actividades de aprendizaje digital.
+            <p>
+
+        </div>
+
+        <div class="login">
+            <a href="">Iniciar Sesion</a>
+        </div>
+        
+    </header>
 
 
 
             <!--   Este es el menu de inicio de sesion   -->
-    <header class="inicio-sesion">
-        <a href="">Iniciar Sesion</a>
-    </header>
+
+
 
 
 
 
 
         <!--   Este es titulo principal de la pagina   -->
-    <div class="titulo">
-        <h1>Automatizando a Sabios</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-            elit. Sit atque, rem doloremque placeat voluptates 
-            voluptas hic laudantium at ipsam reprehenderit 
-            repellat omnis repellendus reiciendis quae enim 
-            qui quia suscipit recusandae.
-        </p>
-    </div>
+            <!-- Título y párrafo -->
+
+            
 
 
 
@@ -72,20 +146,36 @@
 
 
 
+    <footer id="footer">
+        <section>
+            <div class="social-media">
+                <a href="https://www.facebook.com/?locale=es_LA">
+                    <i class='bx bxl-facebook-circle' ></i>
+                </a>
 
+                <a href="https://www.instagram.com/">
+                    <i class='bx bxl-instagram-alt' ></i>
+                </a>
+                
+                <a href="https://www.tiktok.com/foryou">
+                    <i class='bx bxl-tiktok' ></i>
+                </a>
+                
+                <a href="https://mail.google.com/mail/u/0/#inbox">
+                    <i class='bx bxl-gmail' ></i>
+                </a>
 
+                <i class='bx bxs-phone-call' >+52 55 2389 8639</i>
+                
+                <a href="" id="aviso">Aviso de privacidad</a>
 
+            </div>
+        </section>
+    </footer>
 
-    <section>
-        <i class='bx bxl-facebook-circle' ></i>
-        <i class='bx bxl-instagram-alt' ></i>
-        <i class='bx bxl-tiktok' ></i>
-        <i class='bx bxl-gmail' ></i>
-        <i class='bx bxs-phone-call' ></i>
-        <i class='bx bxs-user-voice' ></i>
-        <i class='bx bx-user-circle' ></i>
-    </section>
-</body>
+    
+
+</body><!-- FINAL DEL CODIGO -->
 
 
 </html>

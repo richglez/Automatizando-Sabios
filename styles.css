@@ -1,5 +1,7 @@
 *{
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -10,49 +12,172 @@ body {
 
 
 
-.titulo{
-    text-align: center;
-    margin-top: 300px; /* Agrega margen superior para separar del encabezado */
+header {
+    display: flex; /* Utiliza flexbox para alinear elementos en una fila */
+    align-items: center; /* Centra verticalmente los elementos */
+
 }
 
 
-.titulo h1 {
-    font-size: 60px; /* Puedes ajustar el tamaño de la fuente según tus preferencias */
-  }
+.logo{
+    position: absolute;
+    top: 0;
+    left: 60px;
+    height:160px;;
+}
 
 
 
-.titulo p {
-    font-size: 20px; /* Puedes ajustar el tamaño de la fuente según tus preferencias */
+.titulo h1{
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+    font-size: 60px;
+}
+
+.titulo p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+    text-align: justify;
+    font-weight: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* _______________________LOGIN BOTON_______________________ */
+.login {
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    display: inline-block;
+    background-color: #cc8e2b; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Relleno interno del botón */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    font-size: 16px; /* Tamaño de letra */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+}
+
+
+.login:hover {
+    background-color: #e37d00; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.login a{
+    text-decoration: none;
+    color:#fff
+}
+
+
+
+
+
+
+
+
+
+
+/* _______________________MENU LATERAL_______________________ */
+
+.nav{
+    width: 320px;
+}
+
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #fff;
+}
+
+.list_item{
+    font-size: 20px;
+    list-style: none;
+    width: 100%;
     text-align: center;
 }
 
 
-.inicio-sesion a{
-    text-align: right; /* Esto alinea el enlace a la derecha */
-    margin-top: 10px;
+.list_button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
 }
 
 
-
-
-
-/* _______________________MENU_______________________ */
-.menu-icon{
-    height: 130px;
-}
-
-
-/* Estilo por defecto del menú, oculto */
-.menu-navegacion {
-    display: none;
-  }
-  
-
-.menu-icon:hover {
+.nav_link{
+    color: #303440;
     display: block;
-    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
-    border: 7px solid #000; /* Cambia el color y grosor del marco según tus preferencias */
-    border-radius: 5px; /* Agrega esquinas redondeadas al marco si deseas */
-  }
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+
+.list_item:hover{
+    background: #dbe8ec;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* _______________________FOOTER - CONTACTO_______________________ */
+/* Estilos para el footer */
+#footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    overflow: visible;
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-media a {
+    color: #fff; /* Color del ícono de la red social */
+    font-size: 24px; /* Tamaño del ícono */
+    margin: 0 10px; /* Espaciado horizontal entre íconos */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/* Estilos para el número de teléfono */
+.social-media .bx.bxs-phone-call {
+    display: block; /* Hace que el número sea un elemento de bloque */
+    font-size: 20px; /* Tamaño del número de teléfono */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Estilos para los íconos de contacto */
+.social-media .bx.bxs-user-voice,
+.social-media .bx.bx-user-circle {
+    font-size: 24px; /* Tamaño de los íconos de contacto */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+
+#aviso{
+    font-size: 12px;
+    color: #64b3f4;
+}
