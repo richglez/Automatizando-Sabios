@@ -27,10 +27,14 @@ header {
 }
 
 
+
+
+
+/* _____________LOGO___________________ */
 .logo{
     position: absolute;
     top: 0;
-    left: 60px;
+    left: 50px;
     height:160px;;
 }
 
@@ -55,7 +59,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
+    text-align: center;
+    margin-left: 200px;
     font-size: 80px;
 }
 
@@ -63,10 +68,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
     text-align: center;
     font-weight: 20px;
     margin-right: 70px;
+    margin-left: 250px;
 }
 
 
@@ -141,6 +146,41 @@ header {
 
 
 
+/*_______________________Estilos para la barra de búsqueda_______________________ */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Espacio entre la barra de búsqueda y los botones */
+}
+
+#search-input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#search-button {
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none; /* Elimina el contorno al hacer clic en el botón */
+}
+
+#search-button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+
+
+
+
+
+
 
 /* _______________________MENU LATERAL_______________________ */
 
@@ -149,7 +189,7 @@ header {
 }
 
 .list{
-    width: 100%;
+    width: 130%;
     height: 100vh;
     display: flex;
     justify-content: center;
