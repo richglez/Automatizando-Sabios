@@ -36,16 +36,18 @@
         <!-- Este es el contenedor del menú -->
         <nav class="nav">
             <ul class="list">
-
+            <br><br> <!--Salto de linea para dejar espacio con en logo-->
 
                 <!-- LOGO -->
                 <img src="images/logo-automatizando.png" alt="" srcset="" class="logo">
 
                 <!-- opcion 1 Inicio-->
                 <li class="list_item">
+                    
                     <div class="list_button">
-                        <i class='bx bxs-home-alt-2' ></i>
-                        <a href="#home" class="nav_link nav_link--inside">Inicio</a>  
+                        <br> <!--Para poder centrar los elementos-->
+                        <i class='bx bxs-home-alt-2' id="En_menuIconoHome"></i>
+                        <a href="#home" class="nav_link nav_link--inside" id="En_menuHome">Inicio</a>  
                     </div>
                     
                 </li>
@@ -54,6 +56,7 @@
                 <!-- opcion 2 Acerca de nosotros-->
                 <li class="list_item">
                     <div class="list_button list_button--click">
+                        <br> <!--Para poder centrar los elementos-->
                         <i class='bx bxs-business'></i>
                         <a href="#acerca" class="nav_link nav_link--inside">Acerca de nosotros</a>
                     </div>
@@ -63,6 +66,7 @@
                 <!-- opcion 3 Servicios-->
                 <li class="list_item">
                     <div class="list_button">
+                        <br> <!--Para poder centrar los elementos-->
                         <i class='bx bxs-book-content'></i>
                         <a href="#servicios" class="nav_link nav_link--inside">Servicios</a> 
                     </div>
@@ -72,6 +76,7 @@
                 <!-- opcion 4 Asistente Virtual(Chatbot)-->
                 <li class="list_item">
                     <div class="list_button">
+                        <br> <!--Para poder centrar los elementos-->
                         <i class='bx bxs-message-alt-dots' ></i>
                         <a href="chatbox.html" class="nav_link nav_link--inside">Asistente Virtual</a> 
                     </div>
@@ -82,14 +87,16 @@
                 <!-- opcion 5 Ayuda y Soporte-->
                 <li class="list_item">
                     <div class="list_button">
+                        <br> <!--Para poder centrar los elementos-->
                         <i class='bx bxs-help-circle' ></i>
-                        <a href="#" class="nav_link nav_link--inside">Ayuda y Soporte</a> 
+                        <a href="#help" class="nav_link nav_link--inside">Ayuda y Soporte</a> 
                     </div>
                 </li>
 
 
                 <li class="list_item">
                     <div class="list_button">
+                        <br> <!--Para poder centrar los elementos-->
                         <i class='bx bx-mail-send' ></i>
                         <a href="#footer" class="nav_link nav_link--inside">Contactanos</a> 
                     </div>
@@ -120,20 +127,32 @@
 
 
 
-<!----------------------LOGIN----------------------------->>   
-<div class="barra">
-        <div class="login">
-            <a href="login.html">Iniciar Sesion</a>  <!--btn-->
+        <!----------------------LOGIN & register----------------------------->  
+        <div class="barra">
+                <div class="login">
+                    <a href="login.html">Iniciar Sesion</a>  <!--btn-->
+                </div>
+
+                <div class="register">
+                    <a href="register.html">Registrarse</a>  <!--btn-->
+                </div>
+            </div>    
+    
+    
+    
+
+
+
+        <!----------------------barra de busqueda (SEARCH)----------------------------->  
+
+        <!-- Barra de búsqueda -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-button">Buscar</button>
         </div>
 
-        <div class="register">
-            <a href="register.html">Registrarse</a>  <!--btn-->
-        </div>
-    </div>    
-    
-    
-    
-</header>
+    </header>
+
 
 
 
@@ -145,9 +164,6 @@
     <br>
     <!----------------------About us------------------------------>>    
     <div class="acerca" id="acerca">
-        <a href="#home" id="Back-Home">
-            <i class='bx bxs-home'></i>
-        </a>
 
 
         <br>
@@ -167,43 +183,146 @@
 
 
 
-    <!----------------------Services------------------------------>
-    
-<div class="box-services">
-    <section class="services" id="servicios">
-        <a href="#home" id="Back-Home">
-            <i class='bx bxs-home'></i>
-        </a>
-        <h2>Nuestros Servicios</h2>
+        <!----------------------Services------------------------------>
         
-        <div class="service">
-            <h3>Capacitación Tecnológica Personalizada</h3>
-            <p>Tutoriales interactivos y clases en línea para aprender a usar la tecnología.</p>
-        </div>
-        <div class="service">
-            <h3>Consultas Médicas en Línea</h3>
-            <p>Acceso a médicos en línea para consultas virtuales y reservas de citas.</p>
-        </div>
-        <div class="service">
-            <h3>Juegos y Entretenimiento</h3>
-            <p>Selección de juegos en línea y contenido de entretenimiento.</p>
-        </div>
-        <div class="service">
-            <h3>Asistencia Técnica 24/7</h3>
-            <p>Soporte técnico en línea a cualquier hora, día o noche.</p>
-        </div>
-        <div class="service">
-            <h3>Comunidad y Redes Sociales</h3>
-            <p>Espacios interactivos para conectar con otros usuarios.</p>
-        </div>
-        <div class="service">
-            <h3>Información y Recursos</h3>
-            <p>Artículos educativos y recursos relacionados.</p>
-        </div>
-        
-    </section>
+    <div class="box-services">
+        <section class="services" id="servicios">
+            <a href="#home" id="Back-Home">
+            </a>
+            <h2>Nuestros Servicios</h2>
+            
+            <div class="service">
+                <h3>Capacitación Tecnológica Personalizada</h3>
+                <p>Tutoriales interactivos y clases en línea para aprender a usar la tecnología.</p>
+            </div>
+            <div class="service">
+                <h3>Consultas Médicas en Línea</h3>
+                <p>Acceso a médicos en línea para consultas virtuales y reservas de citas.</p>
+            </div>
+            <div class="service">
+                <h3>Juegos y Entretenimiento</h3>
+                <p>Selección de juegos en línea y contenido de entretenimiento.</p>
+            </div>
+            <div class="service">
+                <h3>Asistencia Técnica 24/7</h3>
+                <p>Soporte técnico en línea a cualquier hora, día o noche.</p>
+            </div>
+            <div class="service">
+                <h3>Comunidad y Redes Sociales</h3>
+                <p>Espacios interactivos para conectar con otros usuarios.</p>
+            </div>
+            <div class="service">
+                <h3>Información y Recursos</h3>
+                <p>Artículos educativos y recursos relacionados.</p>
+            </div>
+            
+        </section>
 
-</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Seccion 1 de Ayuda -->
+        <div class="page-container" id="help"> <!--clase principal-->
+            <a href="#home" id="Back-Home">
+                <i class='bx bxs-home' id="id-Home_icon"></i>
+            </a>
+            
+            <div class="contenedor-principalAYUDA">
+                <h1 id="ayudaTitulo">¿Cómo te podemos ayudar?</h1>
+                <!-- Barra de búsqueda para la sección de Ayuda -->
+                <div class="search-barAYUDA">
+                    <i class='bx bx-search-alt-2'></i>
+                    <input type="text" id="search-input" placeholder="Buscar...">
+                    <button id="search-button">Buscar</button>
+                </div>
+                
+
+
+                <!-- Secciones en boxes con Ayuda con la cuenta, Ayuda con la aplicación, etc. -->
+                <div class="help-sections">  <!--clase de secciones-->
+
+                    <div class="help-section">
+                        <i class='bx bx-help-circle'></i>
+                        <h2>Ayuda con la cuenta</h2>
+                        <p>Información y asistencia relacionada con tu cuenta.</p>
+                    </div>
+                    <div class="help-section">
+                        <i class='bx bx-help-circle'></i>
+                        <h2>Ayuda con la aplicación</h2>
+                        <p>Obtén soporte para problemas de la aplicación.</p>
+                    </div>
+                    <!-- Agrega más secciones de ayuda aquí -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Sección 2 de Ayuda -->
+        <div class="seccion2AYUDA">
+            <ul class="listado-AyudasRapidas">
+                <div id="Ayuda-Rapida"> 
+                    
+                    <h1>Ayuda rápida</h1>
+                    <li class="item-lista">
+                        <a href="">No puedo restablecer mi contraseña</a>
+                        <i class='bx bx-chevron-right'></i>
+                    </li>
+
+                    <li class="item-lista">
+                        <a href="">No recuerdo mi información para iniciar sesión</a>
+                        <i class='bx bx-chevron-right'></i>
+                    </li>
+
+                    <li class="item-lista">
+                        <a href="">Ayuda para iniciar sesión con Facebook</a>
+                        <i class='bx bx-chevron-right'></i>
+                    </li>
+
+                    <li class="item-lista">
+                        <a href="">Actualizaciones de precios</a>
+                        <i class='bx bx-chevron-right'></i>
+                    </li>
+
+                    <li class="item-lista">
+                        <a href="">Métodos de pago</a>
+                        <i class='bx bx-chevron-right'></i>
+                    </li>
+                </div>
+
+
+            </ul><!--Aqui acaba el contenedor de listado-->
+            <div id="comunity">
+                <h2>Visita nuestra Comunidad</h2>
+                <p>¿Tienes preguntas? ¡Nuestra Comunidad mundial de expertos te puede ayudar!</p>
+                <a href=".html">
+                    <button>Ir a la Comunidad</button>
+                </a>
+            </div>
+
+        </div> <!--Aqui acaba el contenedor princiapal-->
+
+
+
+        
+
+
+
+
+
+
+
+
+
 
 
 
@@ -232,7 +351,7 @@
 
                 <i class='bx bxs-phone-call' >+52 55 2389 8639</i>
                 
-                <a href="" id="aviso">Aviso de privacidad</a>
+                <a href=".html" id="aviso">Aviso de privacidad</a>
 
             </div>
         </section>
