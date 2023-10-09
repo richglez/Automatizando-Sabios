@@ -3,19 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login-styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>AS - Iniciar Sesion</title>
 </head>
 
 
 <body>
-    <div class="titulo">
-        <h1>Iniciar Sesion</h1>
+
+    <div class="wrapper"> <!--Contenedor-->
+        <form action=""> <!--********FORMULARIO PARA INICIAR SESION********-->
+            <h1>Iniciar Sesion</h1> <!--Titulo-->
+            <!--User-->
+            <div class="input-box"> <!--Contenedor del usuario txtUsuario-->
+                <input type="text" placeholder="Usuario" required id="txtUsuario">
+                <i class='bx bx-user'></i>
+            </div>
+
+            <!--Password-->
+            <div class="input-box"> <!--Contenedor del la contrasena txtPassword-->
+                <input type="password" placeholder="Contrasena" required id="txtPassword">
+                <i class='bx bx-lock' ></i>
+            </div>
+
+
+
+
+
+
+            <!--Remember-->
+            <div class="remember-forgot"> <!--Contenedor del olvido la contrasena txtForget-->
+                <label for=""> Recordarme
+                    <input type="checkbox">
+                </label>
+                <!--Forget-->
+                <a href="#" id="Olvide">Olvide mi contrasena?</a>
+            </div>
+
+
+
+
+
+            <!--Iniciar Sesion-->
+            <button type="submit" class="btnIniciar">Iniciar</button>
+
+
+
+
+            <!--********FORMULARIO PARA REGISTRARSE********-->
+            <div class="register-link">
+                <p>No tienes cuenta? 
+                    <a href="register.html" id="lblRegistrar">Registrarse</a>
+                </p>
+            </div>
+
+        </form>
     </div>
 </body>
 </html>
