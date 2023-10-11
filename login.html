@@ -45,7 +45,31 @@
 
 
             <!--Iniciar Sesion-->
-            <button type="submit" class="btnIniciar">Iniciar</button>
+            <button  onclick="redirigirAInicio()" type="submit" class="btnIniciar">Iniciar</button>
+
+            <script>
+                function redirigirAInicio() {
+                    // Obtén referencias a los campos de entrada
+                    var txtEmail = document.getElementById("txtEmail");
+                    var txtPassword = document.getElementById("txtPassword");
+                    var txtUser = document.getElementById("txtUser");
+                
+                    // Verifica si los campos obligatorios están completos
+                    if (txtEmail.checkValidity() && txtPassword.checkValidity() && txtUser.checkValidity()) {
+                        // Todos los campos obligatorios están completos, puedes continuar con el procesamiento
+                        // Agrega aquí tu código de procesamiento del formulario
+                
+                        // Luego, redirige al usuario a la página de inicio
+                        window.location.href = "index.html";
+                    } else {
+                        // Alguno de los campos obligatorios no está completo, puedes mostrar un mensaje de error o hacer lo que desees.
+                        alert("Por favor, complete todos los campos obligatorios.");
+                    }
+                }
+            </script>
+
+
+
 
 
 
