@@ -7,9 +7,52 @@
   scroll-behavior: smooth; /* Agregar scroll-behavior para el desplazamiento suave */
 }
 
-body {
-  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+
+
+
+
+
+
+@keyframes fadeInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
+
+
+
+.animate-on-scroll {  /*definir la animación*/
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+
+
+body {
+  background: rgb(117,201,188);
+  background: linear-gradient(90deg, rgba(117,201,188,1) 0%, rgb(139, 238, 212) 20%, rgb(88, 215, 147) 69%);
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+}
+
+#menu-icon{
+  display: none;  /*Quitar el icono de menu*/
+}
+
+
+
+.search-menu{
+  display: none;
+}
+
+
 
 header {
   display: flex; /* Utiliza flexbox para alinear elementos en una fila */
@@ -24,29 +67,46 @@ header {
   height: 160px;
 }
 
+
+
+
 /* _______________________AUTOMATIZANDO A SABIOS - TITULO_______________________ */
-.titulo h1 {
-  display: flex;
-  justify-content: center;
+.titulo {
+  position: absolute;
   align-items: center;
   text-align: center;
-  margin-left: 200px;
+  top: 250px;
+  left: 700px;
+  z-index: -1;
+}
+
+
+.titulo .imagenEnzabezado #imagen{
+  position: absolute;
+  max-width: 180%;
+  left: -380px;
+  opacity: 0.6; /* Cambia este valor para ajustar la opacidad, 0.5 es la mitad de opacidad */
+  top: -450px; /* Ajusta el valor de top según tu necesidad para mover el contenido hacia abajo */
+  z-index: -1;
+}
+
+.titulo h1 {
   font-size: 80px;
+  margin: 0; /* Elimina todos los márgenes */
+  animation: fadeInFromBottom 1.5s ease forwards; /* 1s de duración con una función de temporización "ease" */
 }
 
 .titulo p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  font-size: 35px;
   font-weight: 400;
-  margin-right: 70px;
-  margin-left: 250px;
+  margin: 0; /* Elimina todos los márgenes */
+  animation: fadeInFromBottom 2.6s ease forwards; /* 1s de duración con una función de temporización "ease" */
 }
 
 /* _______________________LOGIN y REGISTER BOTON_______________________ */
 
-.login {
+.login #btnLogin-web{
+  display: block;
   position: fixed;
   top: 20px; /* Ajusta la distancia desde la parte superior */
   right: 20px; /* Ajusta la distancia desde la derecha */
@@ -61,7 +121,7 @@ header {
   cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
 }
 
-.login:hover {
+.login #btnLogin-web:hover {
   background-color: #e37d00; /* Cambia el color de fondo al pasar el mouse */
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -69,12 +129,17 @@ header {
   transition: 1s;
 }
 
+
+.login #btnLogin-mobile{
+  display: none;
+}
+
 .login a {
   text-decoration: none;
   color: #fff;
 }
 
-.register {
+.register #btnRegister {
   position: fixed;
   top: 20px; /* Ajusta la distancia desde la parte superior */
   right: 170px; /* Ajusta la distancia desde la derecha */
@@ -89,7 +154,7 @@ header {
   cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
 }
 
-.register:hover {
+.register #btnRegister:hover {
   background-color: #519bd8; /* Cambia el color de fondo al pasar el mouse */
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -97,7 +162,7 @@ header {
   transition: 1s;
 }
 
-.register a {
+.register #btnRegister {
   text-decoration: none;
   color: #fff;
 }
@@ -154,12 +219,19 @@ header {
 }
 
 /* _______________________MENU LATERAL_______________________ */
+#nav-menu-desplegable{
+  display: none;
+}
 
-.nav {
+#nav-menu-escritorio{
+  display: block;
+}
+
+#nav-menu-escritorio {
   width: 320px;
 }
 
-.nav .list {
+#nav-menu-escritorio .list {
   width: 130%;
   height: 100vh;
   display: flex;
@@ -169,7 +241,7 @@ header {
   background: #fff;
 }
 
-.nav .list_item {
+#nav-menu-escritorio .list_item {
   font-size: 20px;
   list-style: none;
   width: 100%;
@@ -178,7 +250,7 @@ header {
   text-align: left; /* Alinea el texto a la izquierda */
 }
 
-.nav .list_button {
+#nav-menu-escritorio .list_button {
   display: flex;
   align-items: center;
   gap: 1em;
@@ -186,16 +258,19 @@ header {
   margin: 0 auto;
 }
 
-.nav_link {
+#nav-menu-escritorio .nav_link {
   color: #303440;
   display: block;
   padding: 15px 0;
   text-decoration: none;
 }
 
-.nav .list_item:hover {
+#nav-menu-escritorio .list_item:hover {
   background: #dbe8ec;
 }
+
+
+
 
 /* Estilos para el icono */
 
@@ -231,12 +306,50 @@ header {
   padding: 10px 0;
   font-size: 28px; /* Tamaño del título */
   margin-bottom: 20px; /* Espaciado inferior */
+  animation: fadeInFromBottom 1s ease forwards; /* 1s de duración con una función de temporización "ease" */
 }
 
 .acerca-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+.acerca #subtitulo-quienes-somos{
+  font-size: 55px; /* Reducir el tamaño del título */
+  animation: fadeInFromBottom 1s ease forwards; /* 1s de duración con una función de temporización "ease" */
+}
+
+
+.acerca #infoQuienesSomos{
+  font-size: 20px;
+}
+
+.acerca #subtitulo-mision{
+  font-size: 40px;
+}
+
+.acerca #infoMision{
+  font-size: 19px;
+}
+
+
+.acerca #subtitulo-vision{
+  font-size: 40px;
+}
+
+.acerca #infoVision{
+  font-size: 19px;
+}
+
+.acerca #subtitulo-valores{
+  font-size: 40px;
+}
+
+.acerca .valores-wrapper{
+  font-size: 19px;
+
 }
 
 
@@ -408,6 +521,13 @@ header {
 
 /* _______________________AYUDA_______________________ */
 
+
+/* mi div */
+.page-container {
+  min-height: 100vh; /* que ocupe todo el tamano de la pagina*/
+  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+}
+
 /* Estilos para la barra de búsqueda */
 .contenedor-principalAYUDA #search-input {
   padding: 10px;
@@ -420,6 +540,7 @@ header {
   text-indent: 27px; /* Mueve el cursor 10px hacia la derecha */
   margin-bottom: 23px;
   font-size: 18px;
+  
 }
 
 .contenedor-principalAYUDA .search-barAYUDA #icono-search{
@@ -439,17 +560,12 @@ header {
 }
 
 
-/* mi div */
-.page-container {
-  min-height: 100vh; /* que ocupe todo el tamano de la pagina*/
-}
 
 .contenedor-principalAYUDA #ayudaTitulo {
   padding-bottom: 60px;
 }
 
 .contenedor-principalAYUDA {
-  margin-top: 50px;
   margin-left: 700px;
   display: flex;
   flex-direction: column;
@@ -499,6 +615,7 @@ header {
 
 /* _______________________Estilos para la sección 2 de Ayuda_______________________ */
 .seccion2AYUDA {
+  margin-top: -30px;
   min-height: 60vh; /*maxima altura de la pagina en esta seccion*/
   background-image: linear-gradient(120deg, #fdfbfbe8 50%, #ebedeec2 100%);
   border-radius: 30px;
@@ -600,6 +717,10 @@ header {
   box-shadow: 1px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
+
+
+
+
 /* _______________________REVIEWS_______________________ */
 /* Estilos generales para la sección de reseñas */
 .reviews-section {
@@ -692,51 +813,322 @@ header {
   color: #64b3f4;
 }
 
-@media screen and (max-width: 844px) {
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
   body header {
     overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
   }
 
-  .titulo h1 {
-    font-size: 40px; /* Reducir el tamaño de fuente en pantalla pequeña */
-  }
-  .titulo p {
-    font-size: 14px; /* Reducir el tamaño de fuente en pantalla pequeña */
-  }
-  .nav {
-    width: 34%; /* Cambia el ancho del menú lateral a 100% en dispositivos móviles */
+  header{
+    position: fixed;
+    background: rgb(255, 255, 255);
+    height: 90px;
+    width: 100%;
+    display: inline-block;
+    z-index: 2;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.23);  /* sombreado */
   }
 
-  .nav .list_item {
-    font-size: 14px;
+
+
+
+
+
+
+
+/*___________________________ AJUSTAR EL RECORRIDO de la página cuando se hace clic en un enlace __________________________________*/
+  /* Define un margen superior igual a la altura del header para las secciones objetivo */
+  #acerca-page {
+    scroll-margin-top: 90px; /* Ajusta esto al valor de la altura del header */
   }
-  .titulo h1 {
+
+
+  #seccion-servicios-pagina{
+    scroll-margin-top: 90px; /* Ajusta esto al valor de la altura del header */
+  }
+
+  #help{
+    scroll-margin-top: 120px; /* Ajusta esto al valor de la altura del header */
+  }
+/*______________________________________________________________________________________________________________________________*/
+
+
+
+
+  .titulo {
+    position: static; /* Cambia a posición estática */
+    top: auto; /* Elimina la propiedad top */
+    left: auto; /* Elimina la propiedad left */
+    z-index: auto; /* Elimina la propiedad z-index */
+    text-align: center; /* Alinea el texto al centro */
+    
+  }
+
+
+  body .titulo h1{
+    font-size: 46px;
+    margin-left: 200px;
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+
+
+  body .titulo p{
+    font-weight: 500;
+    color: #161616;
+    font-size: 30px;
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+
+
+
+
+
+
+/* _______________________MENU DESPLEGABLE_______________________ */
+
+
+
+#nav-menu-desplegable{
+  display: block;
+}
+
+#nav-menu-escritorio{
+  display: none;
+}
+
+
+/*------------------------------- ELEMENTOS DEL HEADER- NAV -------------------------------*/
+
+.register #btnRegister{
+  display: none;
+}
+
+
+.login #btnLogin-web{
+  display: none;
+}
+
+.login #btnLogin-mobile{
+  display: block;
+  position: fixed;
+  top: 25px; /* Ajusta la distancia desde la parte superior */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  display: inline-block;
+  background-color: #cc8e2b; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Relleno interno del botón */
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto */
+  font-size: 16px; /* Tamaño de letra */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+  margin-right: 65px;
+}
+
+
+#menu-icon {
+  text-decoration: none;
+  text-align: center;
+  display: block; /* Mostrar el icono de menú */
+  position: fixed; /* Posición fija para mantenerlo en su lugar */
+  top: 23px; /* Ajustar la distancia desde la parte superior según tu preferencia */
+  right: 20px; /* Ajustar la distancia desde la derecha según tu preferencia */
+  z-index: 999; /* Establecer un índice z alto para asegurarse de que esté en la parte superior */
+  width: 13%; /*acnho de mi wrapper*/
+  font-size: 39px;  /*heiht de mi icono*/
+  border: solid #535353;
+  background-color: hsl(169, 100%, 81%);
+    /* Cambia el color de la imagen */
+  border-radius: 10px;
+  color: #161616;
+  box-shadow: 0px 0px 14px rgba(0,0,0,0.23);  /* sombreado */
+}
+
+#menu-icon {
+  transition: transform 0.3s ease;
+}
+
+
+#menu-icon.active {
+  transform: rotate(180deg); /* Rota el icono cuando el menú está abierto */
+}
+
+
+/*------------------------------- BARRA DE BUSQUEDA -------------------------------*/
+.search-menu{  /*wrapper*/
+  z-index: 1000; /* Asegúrate de que #menu-icon tenga un z-index alto */
+  display: block;
+  position: fixed;
+  top: 0; /*ponte hasta arriba*/
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  height: 90%;
+  width: 100%;
+  display: none;
+}
+
+.search-menu input{ /*input txt*/
+  width: 250px; /* Ancho del input según tus preferencias */
+  padding: 10px; /* Relleno interno del input */
+  font-size: 14px; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Borde con un color de fondo */
+  border-radius: 26px; /* Bordes redondeados */
+  background-color: #f8f8f8; /* Color de fondo del input */
+  color: #333; /* Color del texto dentro del input */
+  outline: none; /* Elimina el resaltado en el foco del input */
+  text-indent: 25px; /* Mueve el cursor 10px hacia la derecha */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.search-menu #icono-search-menuBusqueda{
+  position: absolute;
+  font-size: 30px;
+  top: 25px;
+  left: 5px;
+}
+
+
+
+
+
+.search-menu #btnCerrar{
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  font-weight: 600;
+}
+
+/*------------------------------- -------------------------------*/
+
+
+
+
+
+#nav-menu-desplegable{  /*div*/
+  position: fixed;
+  height: 75vh;
+  width: 100%;
+  background: rgb(218, 255, 180);
+  background: linear-gradient(47deg, rgba(218, 255, 180, 1) 12%, rgba(116, 227, 210, 1) 100%);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 90px;
+  animation: fadeInFromBottom 0.8s ease forwards; /* 1s de duración con una función de temporización "ease" */
+}
+
+
+/*-----logo--------*/
+#nav-menu-desplegable .logo{
+    position: absolute;
+    top: 580px;
+    left: 150px;
+    height: 17%;
+  }
+
+/*------------------*/
+#nav-menu-desplegable .list_item {  /* mis enlaces */
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    animation: fadeInFromBottom 1.5s ease; /* 1s de duración con una función de temporización "ease" */
+  }
+
+#nav-menu-desplegable .list_item a{ /* mi enlace texto */
+    color: #333; /* Gris oscuro */
+    text-decoration: none;
+  }
+
+
+
+/*------------------------------- -------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ___________________TITULO___________________________ */
+
+
+  .titulo .imagenEnzabezado {
     position: relative;
-    top: 80px;
-    left: -125px;
-    font-size: 22px;
+    width: 100%;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    overflow: hidden; /* Para ocultar cualquier desbordamiento de la imagen */
+    margin-top: -600px;  /* mover el contenedor para arriba */
+  }
+  
+  .titulo .imagenEnzabezado #imagen {
+    overflow: hidden; /* Para ocultar cualquier desbordamiento de la imagen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cubrir la imagen de fondo por toda la pantalla */
+    z-index: -1;
+
+  }
+
+
+
+  .titulo h1 {
+    margin-top: 190px;
+    position: absolute;
+    left: -200px;
+    font-size: 48px;
     align-items: center;
+    font-weight: 800;
+
   }
 
   .titulo p {
     position: relative;
     left: -30px;
-    margin: 100px; /*ajustar el texto para que no se vea como tipo lista y que se vea como un parrafo*/
-    font-size: 12px;
+    margin: 30px; /*ajustar el texto para que no se vea como tipo lista y que se vea como un parrafo*/
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 350px;
+    margin-left: 80px;
+    
+
   }
 
+
+    /* ___________________TITULO___________________________ */
   .logo {
-    height: 110px;
-    margin-top: 120px;
-    margin-bottom: 30px;
-    top: -90px; /*posicionar el elemento en la parte superior de su contenedo*/
+    height: 100px;
+    margin-top: -100px;
     left: 30px; /* Ajusta la posición izquierda según tu preferencia SIN ESPACIOS EN BLANCOS!!!! */
 
   }
 
   #home .search-bar {
     position: relative; /*para poder controlar las posiciones agusto*/
-    left: 120px; /*muevete a partir de la izquierd, dejando pixeles*/
+    left: 78px; /*muevete a partir de la izquierd, dejando pixeles*/
+    border: solid gray;
+    border-radius: 30px;
+    width: 28%;
   }
 
   #home .search-bar #textbox {
@@ -766,7 +1158,38 @@ header {
     margin: 10px 0; /* margen superior e inferior */
   }
 
-  /*__________________________________________*/
+
+
+
+
+
+
+  /*__________________________VALORES________________________________*/
+  .acerca .valores-wrapper .valor{
+    background-color: #fcfcfc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    flex-basis: calc(100% - 0px); /* Establece el ancho de cada valor a aproximadamente el 50% del contenedor, restando el espacio entre los valores */
+    margin-bottom: 25px; /* Espacio vertical entre los valores */
+    transition: all 0.3s; /* Agregar una transición suave para los cambios */
+  }
+
+
+  .acerca .valores-wrapper .valor.active {
+    /* Estilos adicionales cuando se aplica la clase .active */
+    background-color: #ffcc81; /* Cambiar el color de fondo a azul claro al pasar el ratón */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Aumentar la sombra al pasar el ratón */
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el dedo deslizado */
+}
+
+
+
+
+
+
+
+
+  /*___________________SERVICIOS_______________________*/
   
   .service {
     flex: 1;
@@ -779,12 +1202,31 @@ header {
     transition: all 0.3s;
   }
 
-  /*__________________________________________*/
+  box-services{
+    margin-top: 20px;
+  }
+
+
+  .service.active {
+    /* Estilos adicionales cuando se aplica la clase .active */
+    background-color: #d0faff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
+
+
+  /*_______________AYUDA___________________________*/
 
   /* Estilos para la seccion de ayuda en dispositivos móviles */
   .contenedor-principalAYUDA {
-    margin: 20px; /* Agregar un margen para separar la sección del borde de la pantalla */
-    padding: 10px; /* Añadir un poco de espacio interno para que el contenido respire */
+    margin-top: 70px;
     margin-left: 20px; /* Alinear el contenido al borde izquierdo de la pantalla */
     margin-right: 20px; /* Alinear el contenido al borde derecho de la pantalla */
     border-radius: 0; /* Quitar el borde redondeado para que se vea más rectangular */
@@ -869,3 +1311,14 @@ header {
 
   /*__________________________________________*/
 }
+
+
+
+
+
+
+
+
+
+
+
